@@ -3,6 +3,7 @@ body{
     max-width: 100%;
     cursor: context-menu;
     outline: none;
+    margin: 0 auto;
 }
 li{
     list-style: none;
@@ -55,14 +56,15 @@ li{
     line-height: 66px;
     text-align: right;
     text-transform: uppercase;
-    letter-spacing: 5.4px;
+    letter-spacing: 0.7rem;
     writing-mode: vertical-lr;
     text-orientation: mixed;
     margin-top: 12rem;
 }
 .social-links{
     color: #ebebeb;
-    margin-top: -5rem;
+    margin-top: -6rem;
+    margin-left: -2rem;
 }
 .social-links:hover{
     color: #ebebeb;
@@ -70,6 +72,7 @@ li{
 .main{
     display: flex;
     justify-content: flex-end;
+    margin-top: -24rem;
 }
 .main-img{
     width: 940px;
@@ -77,10 +80,11 @@ li{
 }
 
 .main-text{
-    position: absolute;
-    top: 14rem;
-    left: 9.4rem;
+    position: relative;
+    top: 31rem;
+    left: -8.6rem;
     bottom: 0;
+    z-index: 100000;
 
 }
 
@@ -201,8 +205,8 @@ b{
 }
 
 .img-2{
-    position: absolute;
-    top: 68.8rem;
+    position: relative;
+    top: -28.8rem;
     bottom: 0;
     left: 34rem;
     width: 706px;
@@ -254,14 +258,16 @@ cursor: context-menu;
 }
 
 .video-click{
-    position: absolute;
-    top: 82rem;
-    left: 52rem;
+    display: inline-block;
+    position: relative;
+    top: -49.3rem;
+    left: 51.2rem;
 }
 .video-click1{
-    position: absolute;
-    top: 85rem;
-    left: 55.6rem;
+    display: inline-block;
+    position: relative;
+    top: -49.3rem;
+    left: 46.9rem;
     cursor: pointer;
 }
 /* PAGE TWO END */
@@ -385,13 +391,13 @@ cursor: context-menu;
     left: 5rem;
 }
 .shop-arrow-left{
-    position: absolute;
-    top: 125.77rem;
+    position: relative;
+    top: -11rem;
     width: 10px;
     max-width: 100%;
     height: 18px;
     max-height: 100%;
-    right: 82rem;
+    right: 35rem;
 }
 .shop-arrow-right{
     position: relative;
@@ -469,6 +475,9 @@ cursor: context-menu;
     width: 700px;
     max-width: 100%;
 }
+.img2-shadow{
+    margin-bottom: -42rem;
+}
 .img-end{
     display: flex;
     justify-content: flex-end;
@@ -538,6 +547,12 @@ letter-spacing: 5.4px;
 .five-img{
     display: flex;
     justify-content: center;
+}
+.bg-position{
+    position: initial;
+    background-image: url(.././img/img4.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 .line-position{
     display: flex;
