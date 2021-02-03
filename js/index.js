@@ -137,36 +137,36 @@ var shopImg = ['./img/board.png','./img/board1.png','./img/board2.png']
     </div>
     `
     )
-    var shopInterval = window.setInterval(shopRotateSlides, 7000)
+    var shopInterval = window.setInterval(shopRotateSlides, 3000)
     function shopRotateSlides(){
         var shopFirstSlide = $('.shop-content').find('.col-md-4:first')
-        var shopWidth = shopFirstSlide.width()
+        var shopWidth = shopFirstSlide.width('33.3333333333%')
             shopFirstSlide.animate({marginLeft: -shopWidth}, 1500, function(){
             var shopLastSlide = $('.shop-content').find('.col-md-4:last')
                 shopLastSlide.after(shopFirstSlide);
-                shopFirstSlide.css({margnLeft: 0})
+                shopFirstSlide.css({marginLeft: 0})
           })
     }
     function shopNextSlide(){
         window.clearInterval(shopInterval);
         var shopCurrentSlide = $('.shop-content').find('.col-md-4:first');
-        var shopWidth = shopCurrentSlide.width();
+        var shopWidth = shopCurrentSlide.width('33.3333333333%');
         shopCurrentSlide.animate({marginLeft: -shopWidth}, 1500, function(){
           var shopWidth = $('.shop-content').find('.col-md-4:last')
           shopWidth.after(shopCurrentSlide);
           shopCurrentSlide.css({marginLeft: 0})
-          shopInterval = window.setInterval(shopRotateSlides, 7000);
+          shopInterval = window.setInterval(shopRotateSlides, 3000);
         });
       }
     function shopPreviousSlide(){
         window.clearInterval(shopInterval);
         var shopCurrentSlide = $('.shop-content').find('.col-md-4:first');
-        var shopWidth = shopCurrentSlide.width();
+        var shopWidth = shopCurrentSlide.width('33.3333333333%');
         var shopPreviousSlide = $('.shop-content').find('.col-md-4:last')
         shopPreviousSlide.css({marginLeft: -shopWidth})
         shopCurrentSlide.before(shopPreviousSlide);
         shopPreviousSlide.animate({marginLeft: 0}, 1500, function(){
-            shopInterval = window.setInterval(shopRotateSlides, 7000);
+            shopInterval = window.setInterval(shopRotateSlides, 3000);
         });
     }
     $('.shop-arrow-left').click(shopNextSlide)

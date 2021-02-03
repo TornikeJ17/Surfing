@@ -423,6 +423,7 @@ cursor: context-menu;
     height: 18px;
     max-height: 100%;
     right: 83rem;
+    cursor:pointer;
 }
 .shop-arrow-right{
     position: relative;
@@ -432,6 +433,7 @@ cursor: context-menu;
     height: 18px;
     max-height: 100%;
     top: -11rem;
+    cursor:pointer;
 }
 .show-all{
     display: flex;
