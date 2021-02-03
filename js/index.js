@@ -1,38 +1,38 @@
 
 $(document).ready(function(){
 var images = ["./img/img.png","./img/1.png","./img/2.png"];
-    var interval = window.setInterval(rotateSlides, 3000)
+    var interval = window.setInterval(rotateSlides, 7000)
     function rotateSlides(){
-        var $firstSlide = $('#show').find('div:first')
-        var width = $firstSlide.width()
-            $firstSlide.animate({marginLeft: -width}, 1000, function(){
-            var $lastSlide = $('#show').find('div:last')
-                $lastSlide.after($firstSlide);
-                $firstSlide.css({marginLeft: 0})
+        var firstSlide = $('#show').find('div:first')
+        var width = firstSlide.width()
+            firstSlide.animate({marginLeft: -width}, 1500, function(){
+            var lastSlide = $('#show').find('div:last')
+                lastSlide.after(firstSlide);
+                firstSlide.css({marginLeft: 0})
           })
     }
     $('.carousel-arrow-left').click(previousSlide)
     $('.carousel-arrow-right').click(nextSlide)
     function nextSlide(){
         window.clearInterval(interval);
-        var $currentSlide = $('#show').find('div:first');
-        var width = $currentSlide.width();
-        $currentSlide.animate({marginLeft: -width}, 1000, function(){
-          var $lastSlide = $('#show').find('div:last')
-          $lastSlide.after($currentSlide);
-          $currentSlide.css({marginLeft: 0})
-          interval = window.setInterval(rotateSlides, 3000);
+        var currentSlide = $('#show').find('div:first');
+        var width = currentSlide.width();
+        currentSlide.animate({marginLeft: -width}, 1500, function(){
+          var lastSlide = $('#show').find('div:last')
+          lastSlide.after(currentSlide);
+          currentSlide.css({marginLeft: 0})
+          interval = window.setInterval(rotateSlides, 7000);
         });
       }
     function previousSlide(){
         window.clearInterval(interval);
-        var $currentSlide = $('#show').find('div:first');
-        var width = $currentSlide.width();
-        var $previousSlide = $('#show').find('div:last')
-        $previousSlide.css({marginLeft: -width})
-        $currentSlide.before($previousSlide);
-        $previousSlide.animate({marginLeft: 0}, 1000, function(){
-          interval = window.setInterval(rotateSlides, 3000);
+        var currentSlide = $('#show').find('div:first');
+        var width = currentSlide.width();
+        var previousSlide = $('#show').find('div:last')
+        previousSlide.css({marginLeft: -width})
+        currentSlide.before(previousSlide);
+        previousSlide.animate({marginLeft: 0}, 1500, function(){
+          interval = window.setInterval(rotateSlides, 7000);
         });
     }
     $('.carousel-arrow-left').css({'background-color': 'transparent'})
@@ -137,36 +137,36 @@ var shopImg = ['./img/board.png','./img/board1.png','./img/board2.png']
     </div>
     `
     )
-    var shopInterval = window.setInterval(shopRotateSlides, 3000)
+    var shopInterval = window.setInterval(shopRotateSlides, 7000)
     function shopRotateSlides(){
-        var $shopFirstSlide = $('.shop-content').find('.col-md-4:first')
-        var shopWidth = $shopFirstSlide.width()
-            $shopFirstSlide.animate({marginLeft: -shopWidth}, 1000, function(){
-            var $shopLastSlide = $('.shop-content').find('.col-md-4:last')
-                $shopLastSlide.after($shopFirstSlide);
-                $shopFirstSlide.css({marginLeft: 0})
+        var shopFirstSlide = $('.shop-content').find('.col-md-4:first')
+        var shopWidth = shopFirstSlide.width()
+            shopFirstSlide.animate({marginLeft: -shopWidth}, 1500, function(){
+            var shopLastSlide = $('.shop-content').find('.col-md-4:last')
+                shopLastSlide.after(shopFirstSlide);
+                shopFirstSlide.css({margnLeft: 0})
           })
     }
     function shopNextSlide(){
         window.clearInterval(shopInterval);
-        var $shopCurrentSlide = $('.shop-content').find('.col-md-4:first');
-        var shopWidth = $shopCurrentSlide.width();
-        $shopCurrentSlide.animate({marginLeft: -shopWidth}, 1000, function(){
-          var $shopWidth = $('.shop-content').find('.col-md-4:last')
-          $shopWidth.after($shopCurrentSlide);
-          $shopCurrentSlide.css({marginLeft: 0})
-          shopInterval = window.setInterval(shopRotateSlides, 3000);
+        var shopCurrentSlide = $('.shop-content').find('.col-md-4:first');
+        var shopWidth = shopCurrentSlide.width();
+        shopCurrentSlide.animate({marginLeft: -shopWidth}, 1500, function(){
+          var shopWidth = $('.shop-content').find('.col-md-4:last')
+          shopWidth.after(shopCurrentSlide);
+          shopCurrentSlide.css({marginLeft: 0})
+          shopInterval = window.setInterval(shopRotateSlides, 7000);
         });
       }
     function shopPreviousSlide(){
         window.clearInterval(shopInterval);
-        var $shopCurrentSlide = $('.shop-content').find('.col-md-4:first');
-        var shopWidth = $shopCurrentSlide.width();
-        var $shopPreviousSlide = $('.shop-content').find('.col-md-4:last')
-        $shopPreviousSlide.css({marginLeft: -shopWidth})
-        $shopCurrentSlide.before($shopPreviousSlide);
-        $shopPreviousSlide.animate({marginLeft: 0}, 1000, function(){
-            shopInterval = window.setInterval(shopRotateSlides, 3000);
+        var shopCurrentSlide = $('.shop-content').find('.col-md-4:first');
+        var shopWidth = shopCurrentSlide.width();
+        var shopPreviousSlide = $('.shop-content').find('.col-md-4:last')
+        shopPreviousSlide.css({marginLeft: -shopWidth})
+        shopCurrentSlide.before(shopPreviousSlide);
+        shopPreviousSlide.animate({marginLeft: 0}, 1500, function(){
+            shopInterval = window.setInterval(shopRotateSlides, 7000);
         });
     }
     $('.shop-arrow-left').click(shopNextSlide)
